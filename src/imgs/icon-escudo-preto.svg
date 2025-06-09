@@ -1,0 +1,204 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradientes em preto -->
+    <linearGradient id="shieldGradientBlack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A4A4A;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#333333;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="shieldHighlightBlack" cx="30%" cy="20%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.2);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(255,255,255,0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="lockGradientBlack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#666666;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4A4A4A;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#333333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="lockHighlightBlack" cx="30%" cy="20%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.3);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="checkGradientBlack" cx="30%" cy="20%">
+      <stop offset="0%" style="stop-color:#666666;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4A4A4A;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#333333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Efeitos -->
+    <filter id="premiumShadowBlack" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="3" dy="4" result="offset"/>
+      <feFlood flood-color="#000000" flood-opacity="0.4"/>
+      <feComposite in2="offset" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glowBlack" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <pattern id="textureBlack" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="rgba(255,255,255,0.02)"/>
+      <circle cx="2" cy="2" r="0.5" fill="rgba(255,255,255,0.05)"/>
+    </pattern>
+  </defs>
+  
+  <!-- Escudo base -->
+  <path d="M50 10 Q60 22 80 25 L80 50 Q80 75 50 90 Q20 75 20 50 L20 25 Q40 22 50 10 Z" 
+        fill="url(#shieldGradientBlack)" 
+        stroke="#333333" 
+        stroke-width="3"
+        filter="url(#premiumShadowBlack)"/>
+  
+  <!-- Textura sutil -->
+  <path d="M50 12 Q59 23 78 26 L78 50 Q78 74 50 88 Q22 74 22 50 L22 26 Q41 23 50 12 Z" 
+        fill="url(#textureBlack)"/>
+  
+  <!-- Highlight principal -->
+  <path d="M50 12 Q59 23 78 26 L78 50 Q78 74 50 88 Q22 74 22 50 L22 26 Q41 23 50 12 Z" 
+        fill="url(#shieldHighlightBlack)"/>
+  
+  <!-- Borda interna -->
+  <path d="M50 13 Q58 24 76 27 L76 50 Q76 72 50 86 Q24 72 24 50 L24 27 Q42 24 50 13 Z" 
+        fill="none" 
+        stroke="rgba(255,255,255,0.1)" 
+        stroke-width="1"/>
+  
+  <!-- Reflexo lateral -->
+  <path d="M26 30 Q28 28 30 30 L30 55 Q28 57 26 55 Z" 
+        fill="rgba(255,255,255,0.08)"/>
+  
+  <!-- Cadeado -->
+  <g transform="translate(50, 47)" filter="url(#premiumShadowBlack)">
+    <!-- Base do arco -->
+    <path d="M-10 -10 Q-10 -18 0 -18 Q10 -18 10 -10 L10 -2" 
+          fill="none" 
+          stroke="rgba(0,0,0,0.3)" 
+          stroke-width="4.5"
+          stroke-linecap="round"/>
+    
+    <!-- Arco principal -->
+    <path d="M-10 -10 Q-10 -18 0 -18 Q10 -18 10 -10 L10 -2" 
+          fill="none" 
+          stroke="url(#lockGradientBlack)" 
+          stroke-width="4"
+          stroke-linecap="round"
+          filter="url(#glowBlack)"/>
+    
+    <!-- Highlight do arco -->
+    <path d="M-8 -11 Q-8 -16 0 -16 Q8 -16 8 -11" 
+          fill="none" 
+          stroke="rgba(255,255,255,0.3)" 
+          stroke-width="1.5"
+          stroke-linecap="round"/>
+    
+    <!-- Corpo do cadeado -->
+    <rect x="-13" y="-2" width="26" height="18" 
+          rx="4" 
+          fill="url(#lockGradientBlack)"
+          stroke="rgba(0,0,0,0.2)"
+          stroke-width="0.5"/>
+    
+    <!-- Sombra interna -->
+    <rect x="-12" y="-1" width="24" height="2" 
+          rx="1" 
+          fill="rgba(0,0,0,0.15)"/>
+    
+    <!-- Highlight do corpo -->
+    <rect x="-13" y="-2" width="26" height="18" 
+          rx="4" 
+          fill="url(#lockHighlightBlack)"/>
+    
+    <!-- Brilho superior -->
+    <rect x="-10" y="0" width="12" height="5" 
+          rx="2" 
+          fill="rgba(255,255,255,0.25)"/>
+    
+    <!-- Reflexos laterais -->
+    <rect x="-12" y="2" width="3" height="12" 
+          rx="1"
+          fill="rgba(255,255,255,0.15)"/>
+    <rect x="9" y="2" width="3" height="12" 
+          rx="1"
+          fill="rgba(0,0,0,0.15)"/>
+    
+    <!-- Detalhe superior -->
+    <rect x="-8" y="-1" width="16" height="1" 
+          fill="rgba(255,255,255,0.2)"/>
+    
+    <!-- Buraco da chave -->
+    <circle cx="0" cy="7" r="4" fill="rgba(0,0,0,0.5)"/>
+    <circle cx="0" cy="7" r="3.5" fill="#000000"/>
+    <circle cx="0" cy="7" r="3" fill="#1A1A1A"/>
+    
+    <!-- Fenda -->
+    <rect x="-1.5" y="7" width="3" height="6" 
+          rx="1"
+          fill="#000000"/>
+    
+    <!-- Highlight do buraco -->
+    <circle cx="-1" cy="6" r="1.2" fill="rgba(255,255,255,0.15)"/>
+    
+    <!-- Parafusos -->
+    <circle cx="-8" cy="4" r="1.5" fill="rgba(0,0,0,0.3)"/>
+    <circle cx="8" cy="4" r="1.5" fill="rgba(0,0,0,0.3)"/>
+    <circle cx="-8" cy="4" r="1" fill="url(#lockGradientBlack)"/>
+    <circle cx="8" cy="4" r="1" fill="url(#lockGradientBlack)"/>
+    <circle cx="-8" cy="4" r="0.3" fill="rgba(0,0,0,0.6)"/>
+    <circle cx="8" cy="4" r="0.3" fill="rgba(0,0,0,0.6)"/>
+  </g>
+  
+  <!-- Check mark -->
+  <g transform="translate(75, 25)">
+    <!-- Glow do círculo -->
+    <circle cx="0" cy="0" r="14" fill="rgba(0,0,0,0.2)" filter="url(#glowBlack)"/>
+    
+    <!-- Círculo principal -->
+    <circle cx="0" cy="0" r="12" fill="url(#checkGradientBlack)" 
+            stroke="rgba(255,255,255,0.2)" 
+            stroke-width="1.5"
+            filter="url(#premiumShadowBlack)"/>
+    
+    <!-- Highlight do círculo -->
+    <circle cx="-3" cy="-3" r="5" fill="rgba(255,255,255,0.2)"/>
+    
+    <!-- Reflexo interno -->
+    <circle cx="0" cy="0" r="10" 
+            fill="none" 
+            stroke="rgba(255,255,255,0.1)" 
+            stroke-width="1"/>
+    
+    <!-- Check mark com glow -->
+    <path d="M-5 0 L-2 3 L5 -5" 
+          fill="none" 
+          stroke="rgba(255,255,255,0.4)" 
+          stroke-width="3.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#glowBlack)"/>
+    
+    <!-- Check mark principal -->
+    <path d="M-5 0 L-2 3 L5 -5" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="2.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+</svg>

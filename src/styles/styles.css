@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --primary: #2A5C97;
+  --secondary: #FF6B35;
+  --accent: #2EC4B6;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* garante altura total da viewport */
+  padding-top: 56px;
+  font-family: 'Comic Sans MS', cursive !important;
+}
+
+/* O #app será o container flexível que cresce para preencher */
+#app {
+  flex: 1 0 auto; /* cresce, mas pode encolher */
+  display: flex;
+  flex-direction: column;
+}
+
+/* O main precisa crescer para ocupar espaço e empurrar o footer pra baixo */
+main.container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* opcional: centralizar verticalmente */
+}
+
+/* Footer no final */
+.footer {
+  flex-shrink: 0;
+  background-color: var(--dark);
+  color: white;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* Outros estilos que você já tinha */
+.navbar-brand img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a4a7d 100%);
+  color: white;
+  padding: 3rem 0;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: #1a4a7d;
+  border-color: #1a4a7d;
+}
+
+/* Acessibilidade - foco melhorado */
+:focus {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+.icon-pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.text-gradient {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.alert-box {
+    border-left: 4px solid #dc3545;
+    background: linear-gradient(90deg, rgba(220,53,69,0.1) 0%, rgba(220,53,69,0.05) 100%);
+}
+.tip-box {
+    border-left: 4px solid #28a745;
+    background: linear-gradient(90deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.05) 100%);
+}
+.info-box {
+    border-left: 4px solid #17a2b8;
+    background: linear-gradient(90deg, rgba(23,162,184,0.1) 0%, rgba(23,162,184,0.05) 100%);
+}
+.link-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+.link-card:hover {
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    transform: translateY(-2px);
+}
+.security-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}

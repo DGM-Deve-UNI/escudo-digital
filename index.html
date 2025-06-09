@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Charset -->
+  <meta charset="UTF-8">
+  <!-- Responsivo e escalável -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Compatibilidade IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- SEO básico -->
+  <meta name="description" content="Escudo Digital - Proteção e Segurança para seus Dados">
+  <meta name="author" content="Escudo Digital Team">
+  <meta name="robots" content="index, follow">
+  <!-- PWA e Mobile UI -->
+  <meta name="theme-color" content="#007bff">
+  <meta name="application-name" content="Escudo Digital">
+  <meta name="apple-mobile-web-app-title" content="Escudo Digital">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- Evitar detecção automática de telefone em iOS -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- Política de Segurança Atualizada (CSP) -->
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' https://unpkg.com 'unsafe-inline';
+  style-src 'self' https://unpkg.com https://fonts.googleapis.com 'unsafe-inline';
+  font-src 'self' https://fonts.gstatic.com data: https:;
+  img-src 'self' data: https:;
+  connect-src 'self' https://www.gstatic.com/firebasejs/9.22.0/;
+">
+  <!-- Controle do Referer -->
+  <meta name="referrer" content="no-referrer-when-downgrade">
+<!-- ======================================================================= -->
+  <!-- Ícone SVG -->
+  <link rel="icon" href="/escudo-digital/src/imgs/icon-escudo.svg">
+<!-- ----------------------------------------------------------------------- -->
+  <!-- CoreUI CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <link rel="stylesheet" href="./src/styles/home.css">
+  <link rel="stylesheet" href="./src/styles/quiz.css">
+<!-- ----------------------------------------------------------------------- -->
+  <title>Escudo Digital</title>
+</head>
+<body>
+  <div id="app"></div>
+<!-- ----------------------------------------------------------------------------------------- -->
+  <!-- CoreUI JS -->
+  <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
+  <!-- App -->
+  <script src="./src/data/questions.js"></script>
+  <!-- Componentes -->
+  <script src="./src/components/Navbar.js"></script>
+  <script src="./src/components/Footer.js"></script>
+  
+  <!-- Páginas -->
+  <script src="./src/pages/home.js"></script>
+  <script src="./src/pages/quiz.js"></script>
+  <script src="./src/pages/saiba-mais.js"></script>
+  
+  <!-- App Principal -->
+  <script src="./src/scripts/app.js"></script>
+  <script src="./src/scripts/home-script.js"></script>
+</body>
+</html>
+

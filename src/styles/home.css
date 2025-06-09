@@ -1,0 +1,187 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --warning-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    --danger-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  }
+
+  body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+  }
+
+  .hero-section {
+    background: var(--primary-gradient);
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="shield" patternUnits="userSpaceOnUse" width="50" height="50"><circle cx="25" cy="25" r="2" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23shield)"/></svg>');
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  }
+
+  .btn-hero {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+
+  .btn-hero:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+
+  .enhanced-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .enhanced-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  }
+
+  .card-primary .card-header {
+    background: var(--primary-gradient);
+  }
+
+  .card-warning .card-header {
+    background: var(--warning-gradient);
+  }
+
+  .card-success .card-header {
+    background: var(--success-gradient);
+  }
+
+  .card-danger .card-header {
+    background: var(--danger-gradient);
+  }
+
+  .card-header {
+    border: none;
+    padding: 1.5rem;
+  }
+
+  .card-header h5 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .list-group-item {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+  }
+
+  .list-group-item:hover {
+    background: rgba(255,255,255,0.9);
+  }
+
+  .alert-card {
+    background: var(--danger-gradient);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255,154,158,0.3);
+  }
+
+  .alert-card .card-header {
+    background: rgba(255,255,255,0.2);
+    border: none;
+  }
+
+  .alert-card .card-body {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .stats-section {
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+  }
+
+  .security-tip {
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-left: 5px solid #667eea;
+  }
+
+  .modal-content {
+    border-radius: 15px;
+    border: none;
+  }
+
+  .threat-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .threat-high { background: #ff6b6b; color: white; }
+  .threat-medium { background: #feca57; color: white; }
+  .threat-low { background: #48dbfb; color: white; }
+
+  .icon-lg {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
