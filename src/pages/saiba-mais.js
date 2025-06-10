@@ -88,7 +88,7 @@ function SaibaMaisPage() {
                                   <div class="card h-100 border-0 shadow-sm card-hover">
                                       <div class="card-body text-center">
                                           <div class="mb-3">
-                                              <i class="cil-wifi text-info" style="font-size: 3rem;"></i>
+                                              <i class="fa-solid fa-wifi text-info" style="font-size: 3rem;"></i>
                                           </div>
                                           <h5 class="card-title text-info">Redes Inseguras</h5>
                                           <p class="card-text small">
@@ -163,7 +163,7 @@ function SaibaMaisPage() {
                           <!-- Dicas de Proteção -->
                           <div class="row g-4 mb-5" id="protecao">
                               <div class="col-12">
-                                  <h2 class="text-gradient mb-4">
+                                  <h2 class="text-gradient pb-2 mb-4">
                                       <i class="cil-shield-alt me-2"></i>
                                       Como Se Proteger
                                   </h2>
@@ -215,7 +215,7 @@ function SaibaMaisPage() {
                                   <div class="card h-100 border-0 shadow-sm card-hover">
                                       <div class="card-body">
                                           <div class="d-flex align-items-center mb-3">
-                                              <i class="cil-backup-restore text-warning fs-2 me-3"></i>
+                                              <i class="fas fa-cloud-upload-alt text-warning fs-2 me-3"></i>
                                               <h5 class="card-title mb-0">Backup Seguro</h5>
                                           </div>
                                           <p class="mb-3">
@@ -348,7 +348,7 @@ function SaibaMaisPage() {
                               <div class="col-md-6 mb-4">
                                   <div class="card h-100">
                                       <div class="card-header bg-success text-white">
-                                          <h4><i class="cil-flag me-2"></i>Brasil</h4>
+                                          <h4><i class="fas fa-flag me-2"></i></i>Brasil</h4>
                                       </div>
                                       <div class="card-body">
                                           <ul class="list-group list-group-flush">
@@ -421,8 +421,8 @@ function SaibaMaisPage() {
                           </div>
   
                           <div class="text-center">
-                              <button onclick="location.hash = 'home'" class="btn btn-outline-primary btn-lg px-5 py-3">
-                                  <i class="cil-arrow-left me-2"></i>
+                              <button onclick="location.hash = 'home'" class="btn btn-outline-primary btn-lg px-5">
+                                  <i class="cil-arrow-left fw-bold me-2" style="vertical-align: middle;"></i>
                                   Voltar para Início
                               </button>
                           </div>

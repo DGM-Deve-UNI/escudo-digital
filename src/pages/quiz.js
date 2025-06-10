@@ -54,22 +54,21 @@ function QuizPage() {
           
           <!-- Opções -->
           <div id="options-container" class="options-container">
-            <!-- Opções serão inseridas dinamicamente -->
-            <div class="option-item" data-option="a">
+            <div class="option-item">
               <span class="option-letter">A</span>
-              Clicar no link imediatamente para não perder acesso à conta
+              Clicar no link imediatamente para resolver o problema
             </div>
-            <div class="option-item" data-option="b">
+            <div class="option-item">
               <span class="option-letter">B</span>
-              Ignorar o e-mail e ligar diretamente para o banco
+              Ignorar o e-mail e entrar no site do banco diretamente pelo navegador
             </div>
-            <div class="option-item" data-option="c">
+            <div class="option-item">
               <span class="option-letter">C</span>
-              Encaminhar o e-mail para amigos perguntando se é verdadeiro
+              Responder o e-mail pedindo mais informações
             </div>
-            <div class="option-item" data-option="d">
+            <div class="option-item">
               <span class="option-letter">D</span>
-              Responder o e-mail perguntando se é legítimo
+              Encaminhar o e-mail para amigos perguntando se é verdadeiro
             </div>
           </div>
           
@@ -100,7 +99,7 @@ function QuizPage() {
               </div>
             </div>
             
-            <button id="next-btn" class="btn btn-next text-white d-none">
+            <button id="next-btn" class="btn btn-next text-white mt-3">
               <span class="position-relative">
                 Próxima <i class="fas fa-arrow-right ms-2"></i>
               </span>

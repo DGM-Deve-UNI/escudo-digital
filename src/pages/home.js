@@ -60,14 +60,13 @@ function HomePage() {
         </div>
       </div>
     </div>
-
     <!-- Cards de Dicas Melhorados -->
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card enhanced-card card-primary h-100 shadow-sm">
           <div class="card-header text-white text-center">
             <i class="fas fa-lock icon-lg"></i>
-            <h5><i class="fas fa-key me-2"></i>Senhas Inteligentes</h5>
+            <h5><i class="fas fa-key me-2"></i>Senhas Seguras</h5>
           </div>
           <div class="card-body">
             <ul class="list-group list-group-flush">
@@ -97,7 +96,7 @@ function HomePage() {
 
       <div class="col-md-4">
         <div class="card enhanced-card card-warning h-100 shadow-sm">
-          <div class="card-header text-dark text-center">
+          <div class="card-header text-white text-center">
             <i class="fas fa-exclamation-triangle icon-lg"></i>
             <h5><i class="fas fa-bug me-2"></i>Golpes em Alta</h5>
           </div>
@@ -130,8 +129,8 @@ function HomePage() {
       <div class="col-md-4">
         <div class="card enhanced-card card-success h-100 shadow-sm">
           <div class="card-header text-white text-center">
-            <i class="fas fa-shield-check icon-lg"></i>
-            <h5><i class="fas fa-check-circle me-2"></i>Proteção Total</h5>
+            <i class="fas fa-shield-alt icon-lg"></i>
+            <h5><i class="fas fa-check-circle me-2"></i>Boas Práticas</h5>
           </div>
           <div class="card-body">
             <ul class="list-group list-group-flush">
@@ -182,13 +181,63 @@ function HomePage() {
         </div>
       </div>
     </div>
+  </main>
 
-    <!-- Chamada para ação melhorada -->
-    <div class="card alert-card mt-5 shadow">
-      <div class="card-header text-white">
-        <h4><i class="fas fa-bell me-2"></i>⚠️ Alerta Crítico de Segurança!</h4>
+    <!-- Alert Section -->
+    <section class="alert-section py-5 px-4 border-top border-bottom bg-warning text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h2><i class="fas fa-exclamation-triangle me-3"></i>Alerta de Segurança</h2>
+            <p class="mb-0">Novo golpe circulando! Criminosos estão se passando por empresas de energia elétrica. Nunca forneça dados por telefone.</p>
+          </div>
+          <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <button class="btn btn-light" data-coreui-toggle="modal" data-coreui-target="#alertModal">
+              <i class="fas fa-info-circle me-2"></i> Detalhes
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="card-body text-white">
+    </section>
+    <!-- Modal de Alerta -->
+    <div class="modal fade" id="alertModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-danger rounded-top-4 text-white">
+            <h5 class="modal-title"><i class="fas fa-exclamation-triangle me-2"></i>Alerta de Golpe</h5>
+            <button type="button" class="btn-close btn-close-white" data-coreui-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Golpe da Fatura de Energia</h4>
+            <p>Criminosos estão ligando se passando por funcionários de empresas de energia elétrica, alegando:</p>
+            <ul>
+              <li>Conta em atraso com risco de corte</li>
+              <li>Necessidade de pagamento via PIX imediato</li>
+              <li>Atualização cadastral urgente</li>
+            </ul>
+            <div class="alert alert-warning">
+              <strong>Como se proteger:</strong>
+              <ul>
+                <li>Nunca forneça dados por telefone</li>
+                <li>Verifique sempre no site oficial</li>
+                <li>Desligue e ligue para o número oficial</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Denunciar Golpe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <main class="container my-5">
+    <!-- Chamada para ação melhorada -->
+    <div class="card alert-card shadow">
+      <div class="card-header text-white">
+        <h4><i class="fas fa-bell me-2"></i>Fique alerta!</h4>
+      </div>
+      <div class="card-body px-4 text-white">
         <div class="row align-items-center">
           <div class="col-md-8">
             <p class="fs-5 mb-3">
@@ -217,7 +266,7 @@ function HomePage() {
 <div class="modal fade" id="emergencyModal" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header bg-danger text-white">
+      <div class="modal-header bg-info rounded-top-4 text-white">
         <h5 class="modal-title"><i class="fas fa-life-ring me-2"></i>Central de Ajuda e Canais Oficiais</h5>
           <button type="button" class="btn-close btn-close-white" data-coreui-dismiss="modal"></button>
       </div>
@@ -263,5 +312,21 @@ function HomePage() {
   </div>
 </div>
 </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Pronto para se proteger?</h2>
+        <p class="lead mb-5">Junte-se a milhares de brasileiros que já aprenderam a navegar com segurança</p>
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+          <a href="#quiz" class="btn btn-light btn-lg px-5" data-spa-link>
+            <i class="fas fa-puzzle-piece me-2"></i> Iniciar Quiz
+          </a>
+          <a href="#saiba-mais" class="btn btn-outline-light btn-lg px-5" data-spa-link>
+            <i class="fas fa-book-open me-2"></i> Ler Guia
+          </a>
+        </div>
+      </div>
+    </section>
   `;
 }

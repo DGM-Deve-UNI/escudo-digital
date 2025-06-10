@@ -8,6 +8,11 @@
   --light: #f8f9fa;
   --dark: #212529;
 }
+* {
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+}
 
 html, body {
   height: 100%;
@@ -17,9 +22,9 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* garante altura total da viewport */
+  min-height: 100vh;
   padding-top: 56px;
-  font-family: 'Comic Sans MS', cursive !important;
+  /* font-family: 'Comic Sans MS', cursive !important; */
 }
 
 /* O #app será o container flexível que cresce para preencher */
