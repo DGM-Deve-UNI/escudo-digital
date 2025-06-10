@@ -3,7 +3,7 @@ function Navbar() {
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#home" data-spa-link>
-          <img src="/escudo-digital/src/imgs/icon-escudo.svg" alt="Ícone de escudo e cadeado" width="40" class="me-2">
+          <img src="/public/imgs/icon-escudo.svg" alt="Ícone de escudo e cadeado" width="40" class="me-2">
           Escudo Digital
         </a>
         <button class="navbar-toggler" type="button" data-coreui-toggle="collapse" data-coreui-target="#navbar">

@@ -6,7 +6,7 @@ function Footer() {
       <!-- Logo e descrição -->
       <div class="col-md-4">
         <h3 class="h4 mb-3 d-flex justify-content-center align-items-center">
-          <img src="/escudo-digital/src/imgs/icon-escudo-branco.svg" alt="Ícone de cadeado" width="40" class="me-2">
+          <img src="/public/imgs/icon-escudo-branco.svg" alt="Ícone de cadeado" width="40" class="me-2">
           Escudo Digital
         </h3>
         <p class="text-white-50">Escudo Digital - Proteção e Segurança para seus Dados</p>

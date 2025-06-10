@@ -6,7 +6,7 @@ function HomePage() {
       <div class="row align-items-center">
         <div class="col-lg-6 hero-content">
           <h1 class="display-4 fw-bold text-white mb-4">
-            <img src="/escudo-digital/src/imgs/icon-escudo.svg" alt="Ícone de escudo e cadeado" width="80" class="me-2">Escudo Digital
+            <img src="/public/imgs/icon-escudo.svg" alt="Ícone de escudo e cadeado" width="80" class="me-2">Escudo Digital
           </h1>
           <p class="lead text-white mb-5">Domine as técnicas de segurança digital e proteja-se contra os golpes mais recentes</p>
           <div class="d-flex flex-wrap gap-3">
